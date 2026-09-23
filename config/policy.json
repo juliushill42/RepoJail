@@ -1,0 +1,14 @@
+{
+  "allowed_commands": [
+    "git", "go", "cargo", "rustc", "python", "python3", "node", "npm", "npx", "pnpm", "yarn",
+    "make", "cmake", "ninja", "clang", "clang++", "gcc", "g++", "javac", "java", "gradle", "bash", "sh",
+    "sed", "awk", "grep", "find", "xargs", "printf", "cat", "cp", "mv", "mkdir", "rm", "touch", "tar", "gzip", "unzip"
+  ],
+  "allow_workspace_executables": true,
+  "default_ttl_seconds": 1800,
+  "max_ttl_seconds": 21600,
+  "max_command_seconds": 900,
+  "max_output_bytes": 2097152,
+  "max_workspace_bytes": 2147483648,
+  "network_default": false
+}

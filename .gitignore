@@ -1,0 +1,5 @@
+/bin/
+/repojail
+*.log
+.env
+.DS_Store

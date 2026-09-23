@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RepoJail</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div><h1>RepoJail</h1><p>Disposable coding agent workspaces.</p></div>
+      <div id="status" class="status">loading…</div>
+    </header>
+
+    <section class="panel create">
+      <div class="field grow"><label>Repository</label><input id="repo" placeholder="https://github.com/org/repo.git or leave blank"></div>
+      <div class="field"><label>Ref</label><input id="ref" placeholder="main / tag / SHA"></div>
+      <div class="field small"><label>TTL (sec)</label><input id="ttl" type="number" value="1800" min="1"></div>
+      <label class="check"><input id="network" type="checkbox"> allow network</label>
+      <button id="create">Create jail</button>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>Active jails</h2><button class="ghost" id="refresh">Refresh</button></div>
+      <div id="jails" class="grid"></div>
+    </section>
+
+    <section class="panel terminal">
+      <div class="terminal-head"><strong>Execution output</strong><button class="ghost" id="clear">Clear</button></div>
+      <pre id="output">Ready.</pre>
+    </section>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>
